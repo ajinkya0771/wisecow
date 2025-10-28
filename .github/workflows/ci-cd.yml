@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Wisecow
+name: CI/CD Pipeline for Wisecow (Debug)
 
 on:
   push:
@@ -9,25 +9,44 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
-      - name: Login to DockerHub
-        uses: docker/login-action@v2
+      - name: Verify Secrets
+        run: |
+          echo "DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}"
+          if [ -z "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
+            echo "❌ DOCKERHUB_TOKEN is empty!"
+            exit 1
+          else
+            echo "✅ DOCKERHUB_TOKEN is set."
+          fi
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Test Docker login
+        run: |
+          echo "🔍 Testing Docker login..."
+          docker info
+          docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}" || exit 1
+          echo "✅ Docker login successful."
+
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/wisecow:latest .
+        run: |
+          echo "🚧 Starting Docker build..."
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/wisecow:latest .
+          echo "✅ Docker image built successfully."
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/wisecow:latest
+        run: |
+          echo "🚀 Pushing Docker image..."
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/wisecow:latest
+          echo "✅ Docker image pushed successfully."
