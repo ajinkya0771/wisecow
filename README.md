@@ -1,3 +1,38 @@
+# 🐮 Wisecow – Kubernetes Deployment with CI/CD & TLS
+
+## 🚀 Project Overview
+
+This project is part of the **AccuKnox DevOps Trainee Practical Assessment**.  
+The goal was to **containerize**, **deploy**, and **secure** the Wisecow application on a Kubernetes cluster with automated CI/CD integration using GitHub Actions.
+
+---
+
+## 🧩 Problem Statement
+
+**Objective:**  
+Containerize and deploy the [Wisecow](https://github.com/nyrahul/wisecow) web server application using Kubernetes and enable secure HTTPS (TLS) communication.
+
+---
+
+## ✅ Achievements Summary
+
+| Component | Status | Description |
+|------------|--------|-------------|
+| 🐳 **Dockerization** | ✅ Completed | Dockerfile created to containerize the Wisecow app |
+| ☸️ **Kubernetes Deployment** | ✅ Completed | Deployment, Service, and Namespace manifests created |
+| 🌐 **Ingress + TLS** | ✅ Completed | Configured Ingress with self-signed TLS for HTTPS |
+| ⚙️ **CI/CD (GitHub Actions)** | ✅ Completed | Automates build and push of Docker image to registry |
+| 📦 **Repository** | ✅ Public | [ajinkya0771/wisecow](https://github.com/ajinkya0771/wisecow) |
+| 📸 **Verification Screenshot** | ✅ Done | HTTPS working at `https://wisecow.local` |
+
+---
+
+## 🧱 Repository Structure
+
+
+
+
+
 # Cow wisdom web server
 
 ## Prerequisites

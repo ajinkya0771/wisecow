@@ -1,17 +1,20 @@
-# Use a lightweight base image
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
-# Install required packages
-RUN apt-get update && apt-get install -y cowsay fortune netcat-openbsd && apt-get clean
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Copy the script
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository universe && \
+    apt-get update && \
+    apt-get install -y fortune-mod cowsay netcat-openbsd && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
 COPY wisecow.sh /usr/local/bin/wisecow.sh
-
-# Make it executable
 RUN chmod +x /usr/local/bin/wisecow.sh
 
-# Expose the default port
+# Add fortune and cowsay to PATH
+ENV PATH="/usr/games:${PATH}"
+
 EXPOSE 4499
 
-# Run the script
 CMD ["/usr/local/bin/wisecow.sh"]
