@@ -1,0 +1,24 @@
+[2025-10-31 12:22:47] System Health Check starting...
+[2025-10-31 12:22:47] CPU usage: % (threshold 80%)
+[2025-10-31 12:22:47] Memory usage: % (threshold 80%)
+[2025-10-31 12:22:47] Disk usage (/): 44G% (threshold 80%)
+[2025-10-31 12:22:47] ALERT: Process 'python' is NOT running!
+[2025-10-31 12:22:47] ALERT: Process 'docker' is NOT running!
+[2025-10-31 12:22:48] ALERT: Process 'kubectl' is NOT running!
+[2025-10-31 12:22:48] System Health issues detected.
+[2025-10-31 12:30:33] ===== System Health Check starting... =====
+[2025-10-31 12:30:36] CPU usage: % (threshold 80%)
+[2025-10-31 12:30:37] Memory usage: % (threshold 80%)
+[2025-10-31 12:30:38] Disk usage on /: 44G% (threshold 80%)
+[2025-10-31 12:30:39] ⚠ ALERT: Process 'python' is NOT running!
+[2025-10-31 12:30:39] ⚠ ALERT: Process 'docker' is NOT running!
+[2025-10-31 12:30:39] ⚠ ALERT: Process 'kubectl' is NOT running!
+[2025-10-31 12:30:40] ❌ System Health issues detected.
+[2025-10-31 12:44:39] ===== System Health Check starting... =====
+[2025-10-31 12:44:40] CPU usage: 35% (threshold 80%)
+[2025-10-31 12:44:40] Memory usage: % (threshold 80%)
+[2025-10-31 12:44:40] Disk usage on /: 44G% (threshold 80%)
+[2025-10-31 12:44:40] ⚠ ALERT: Process 'python' is NOT running!
+[2025-10-31 12:44:40] ⚠ ALERT: Process 'docker' is NOT running!
+[2025-10-31 12:44:40] ⚠ ALERT: Process 'kubectl' is NOT running!
+[2025-10-31 12:44:40] ❌ System Health issues detected.
