@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 
-This project is part of the **AccuKnox DevOps Trainee Practical Assessment**.  
+This project is part of the ''DevOps Trainee program''.  
 The goal was to **containerize**, **deploy**, and **secure** the Wisecow application on a Kubernetes cluster with automated CI/CD integration using GitHub Actions.
 
 ---
