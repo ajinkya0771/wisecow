@@ -51,17 +51,19 @@ Containerize and deploy the **Wisecow** web server application using **Kubernete
 
 ---
 
-## 🗂️ Repository Structure  
+## 📁 Repository Structure
 
+```txt
 wisecow/
-├── .github/workflows/ # CI/CD pipeline configuration (GitHub Actions)
-├── k8s/ # Kubernetes manifests (deployment, service, ingress)
-├── scripts/ # Bash automation scripts
-├── screenshots/ # Verification screenshots
-├── Dockerfile # Container image configuration
-├── docker-compose.yml # Optional local setup (Minikube / Local testing)
-├── .gitignore # Sensitive files excluded
-└── README.md # Project documentation
+├── .github/workflows/        # CI/CD pipeline configuration (GitHub Actions)
+├── k8s/                      # Kubernetes manifests (deployment, service, ingress)
+├── scripts/                  # Bash automation scripts
+├── screenshots/              # Verification screenshots
+├── Dockerfile                # Container image configuration
+├── docker-compose.yml        # Optional local setup (Minikube / Local testing)
+├── .gitignore                # Sensitive files excluded
+└── README.md                 # Project documentation
+
 
 ## ⚙️ How to Run (For Reference Only)  
 
