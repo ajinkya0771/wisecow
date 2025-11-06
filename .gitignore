@@ -1,0 +1,6 @@
+tls.key
+tls.crt
+wisecow.key
+wisecow.crt
+*.pem
+*.p12
