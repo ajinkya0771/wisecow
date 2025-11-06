@@ -67,9 +67,12 @@ wisecow/
 
 ## ⚙️ How to Run (For Reference Only)  
 
-### 🧱 Prerequisites  
+## 🛠️ How to Run (For Reference Only)
+
+### 🔧 Prerequisites
 ```bash
 sudo apt install fortune-mod cowsay -y
+
 ▶️ Deployment Steps (Local/Minikube)
 Apply all manifests:
 
