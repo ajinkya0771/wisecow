@@ -63,10 +63,7 @@ wisecow/
 ├── docker-compose.yml        # Optional local setup (Minikube / Local testing)
 ├── .gitignore                # Sensitive files excluded
 └── README.md                 # Project documentation
-
-
-## ⚙️ How to Run (For Reference Only)  
-
+  
 ## 🛠️ How to Run (For Reference Only)
 
 ### 🔧 Prerequisites
