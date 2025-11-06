@@ -63,11 +63,6 @@ wisecow/
 ├── .gitignore # Sensitive files excluded
 └── README.md # Documentation
 
-yaml
-Copy code
-
----
-
 ## ⚙️ How to Run (For Reference Only)  
 
 ### 🧱 Prerequisites  
@@ -77,17 +72,14 @@ sudo apt install fortune-mod cowsay -y
 Apply all manifests:
 
 bash
-Copy code
 kubectl apply -f k8s/
 Verify running pods and services:
 
 bash
-Copy code
 kubectl get pods,svc -n wisecow
 Access via HTTPS:
 
 arduino
-Copy code
 https://wisecow.local
 🔒 Security & Compliance
 Sensitive files such as tls.key, tls.crt, wisecow.key, and wisecow.crt were securely removed and added to .gitignore.
