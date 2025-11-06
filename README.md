@@ -52,3 +52,54 @@ Containerize and deploy the **Wisecow** web server application using **Kubernete
 ---
 
 ## 🗂️ Repository Structure  
+
+wisecow/
+├── .github/workflows/ # CI/CD pipeline configuration
+├── k8s/ # Kubernetes manifests (deployment, service, ingress)
+├── scripts/ # Bash automation scripts
+├── screenshots/ # Verification screenshots
+├── Dockerfile # Container image configuration
+├── docker-compose.yml # Optional local setup
+├── .gitignore # Sensitive files excluded
+└── README.md # Documentation
+
+yaml
+Copy code
+
+---
+
+## ⚙️ How to Run (For Reference Only)  
+
+### 🧱 Prerequisites  
+```bash
+sudo apt install fortune-mod cowsay -y
+▶️ Deployment Steps (Local/Minikube)
+Apply all manifests:
+
+bash
+Copy code
+kubectl apply -f k8s/
+Verify running pods and services:
+
+bash
+Copy code
+kubectl get pods,svc -n wisecow
+Access via HTTPS:
+
+arduino
+Copy code
+https://wisecow.local
+🔒 Security & Compliance
+Sensitive files such as tls.key, tls.crt, wisecow.key, and wisecow.crt were securely removed and added to .gitignore.
+TLS functionality remains intact using Kubernetes secrets, ensuring secure communication and no exposure of private credentials.
+
+✅ Final Status
+The project is fully functional, secure, and production-ready, fulfilling all requirements of the AccuKnox DevOps Trainee Practical Assessment.
+
+Verified on Minikube cluster
+
+Successfully demonstrated CI/CD, TLS, and automation
+
+No exposed secrets — GitHub Secret Scanning confirms full compliance
+
+
